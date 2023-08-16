@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mega To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="todo-container">
+        <h2>To-Do List</h2>
+        <input type="text" id="todo-input" placeholder="Enter your task">
+        <textarea id="todo-description" placeholder="Task description"></textarea>
+        <button id="add-btn">Add Task</button>
+
+        <div id="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="completed">Completed</button>
+        <button data-filter="pending">Pending</button>
+        </div>
+        <div id="theme-selector-container">
+            <span>Theme:</span>
+            <select id="theme-selector">
+                <option value="default">Default Theme</option>
+                <option value="dark">Dark Theme</option>
+                <option value="light">Light Theme</option>
+                <option value="blue">Blue Theme</option>
+                <option value="pink">Pink Theme</option>
+            </select>
+        </div>
+
+
+        <!-- <div class="controls">
+            <select id="theme-selector">
+                <option value="default">Default Theme</option>
+                <option value="dark">Dark Theme</option>
+                <option value="light">Light Theme</option>
+                <option value="blue">Blue Theme</option>
+                <option value="pink">Pink Theme</option>
+            </select>
+            <input type="text" id="todo-input" placeholder="Enter your task">
+            <textarea id="todo-description" placeholder="Task description"></textarea>
+            <button id="add-btn">Add Task</button>
+            <div id="filters">
+                <button data-filter="all" class="active">All</button>
+                <button data-filter="completed">Completed</button>
+                <button data-filter="pending">Pending</button>
+            </div>
+        </div> -->
+
+
+        <ul id="todo-list"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

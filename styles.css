@@ -1,0 +1,232 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #282C34; /* Dark Background */
+    color: #F4F4F6; /* Light text */
+    height: 100vh;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+    padding: 20px;
+
+}
+
+.todo-container {
+    background: #3A3F4B; /* Slightly lighter shade for the container */
+    padding: 34px; /* Based on Fibonacci series */
+    border-radius: 8px;
+    width: 610px; /* Derived from Fibonacci series: 377px + 233px */
+    box-shadow: 0 21px 34px rgba(0, 0, 0, 0.2);
+    max-height: 80vh; /* Set a max height based on the viewport height */
+    overflow-y: auto; /* Allow vertical scrolling within the container */
+}
+
+h2 {
+    color: #F4B400; /* Golden color for highlight */
+    border-bottom: 2px solid #F4B400;
+    padding-bottom: 8px;
+    margin-bottom: 21px; /* Based on Fibonacci series */
+    font-size: 34px; /* Fibonacci */
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 13px 21px; /* Based on Fibonacci series */
+    margin-bottom: 13px; /* Fibonacci */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+input, textarea {
+    background: #F4F4F6; /* Light background */
+    color: #282C34; /* Dark text */
+}
+
+button {
+    cursor: pointer;
+    background: #F4B400; /* Golden highlight */
+    color: #282C34;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #FFD700; /* Brighter golden on hover */
+}
+
+#filters {
+    margin-bottom: 21px; /* Fibonacci */
+}
+
+#filters button {
+    margin-right: 13px; /* Fibonacci */
+}
+
+li {
+
+    background: #4A4F5B; /* Variant shade for task items */
+    padding: 13px;
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-start; /* Align to the top */
+    justify-content: space-between;
+    flex-direction: column; /* Stack the contents vertically */
+    gap: 8px; /* Space between the elements inside the list */
+    margin-bottom: 8px; /* Smaller margin for list items */
+
+}
+
+li p {
+    max-width: 50%;
+    text-overflow: ellipsis;
+    white-space: pre-wrap; /* Allow wrapping of the text */
+    overflow: visible; /* Let the text show normally */
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #FFFFFF; /* Pure white text */
+    height: auto;
+}
+
+.completed + p {
+    color: #FFFFFF; /* Pure white text */
+    height: auto;
+}
+
+li input[type="checkbox"] {
+    align-self: flex-end; /* Position checkbox to the right */
+}
+
+
+
+.completed + span {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    width: 40px; /* Adjust width for sliding effect */
+    height: 20px;
+    border-radius: 20px;
+    background-color: #F4F4F6;
+    margin-right: 15px;
+    position: relative;
+    transition: background-color 0.4s ease;
+}
+
+.toggle-btn:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 2px; /* Start from left side */
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #282C34;
+    transition: left 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: #F4B400; /* Golden color for active state */
+}
+
+.toggle-btn.active:after {
+    left: 22px; /* Slide to the other end when active */
+}
+
+
+
+
+
+
+
+/*  Late added */
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+#theme-selector {
+    margin-right: 15px;
+}
+
+#filters {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+/* Default Theme */
+body.default {
+    background-color: #282C34;
+    color: #FFFFFF;
+}
+
+/* Dark Theme */
+body.dark {
+    background-color: #1B1E23;
+    color: #EDEDED;
+}
+
+/* Light Theme */
+body.light {
+    background-color: #FAFAFA;
+    color: #333;
+}
+
+/* Blue Theme */
+body.blue {
+    background-color: #007BFF;
+    color: #7bc9f9;
+}
+
+/* Pink Theme */
+body.pink {
+    background-color: #FFC0CB;
+    color: #f399f3;
+}
+
+/* Default Theme */
+body.default {
+    background-color: #F4F4F6;
+    color: #282C34;
+}
+
+/* Dark Theme */
+body.dark {
+    background-color: #282C34;
+    color: #F4F4F6;
+}
+
+/* Light Theme */
+body.light {
+    background-color: #FFFFFF;
+    color: #282C34;
+}
+
+/* Rest of the CSS remains unchanged */
+
+
+
+#theme-selector {
+    display: flex; /* Display theme selector in a line */
+    align-items: center;
+    margin-top: 10px; /* Add spacing */
+}
+
+#theme-selector span {
+    margin-right: 5px;
+}
+
+
